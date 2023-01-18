@@ -54,9 +54,9 @@
         <div class="container" data-aos="fade-up">
   
           <div class="section-title">
-            <h2>About</h2>
-            <h3>Find Out More <span>About Us</span></h3>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            <h2>Giới thiệu</h2>
+            <h3>Điện nước <span>Tiến Nguyễn</span></h3>
+            <p></p>
           </div>
   
           <div class="row">
@@ -64,34 +64,31 @@
               <img src="assets/img/about.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+              <h3>Địa chỉ cố định</h3>
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                W77P+223, Láng Quắm, Thạch Hoà, Giồng Riềng, Kiên Giang, Vietnam
               </p>
               <ul>
                 <li>
                   <i class="bx bx-store-alt"></i>
                   <div>
-                    <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                    <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                    <h5>Điểm lưu động sửa chữa</h5>
+                    <p>Trên địa bàn tỉnh Kiên Giang và các tỉnh lân cận: An Giang, Đồng Tháp, Cà Mau</p>
                   </div>
                 </li>
                 <li>
                   <i class="bx bx-images"></i>
                   <div>
-                    <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                    <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+                    <h5>Thông tin người phụ trách</h5>
+                    <p><a href="#">Nguyễn Văn Tiến (Click để xem chi tiết)</a></p>
                   </div>
                 </li>
               </ul>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
+                Nội dung cần bổ sung thêm nếu cần thiết
               </p>
             </div>
           </div>
         </div>
       </section><!-- End About Section -->
-       </main>
+</main>

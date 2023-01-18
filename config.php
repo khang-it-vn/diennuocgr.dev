@@ -10,4 +10,5 @@
 	define("ROOT_PATH", "/");
 	define("ROOT_URL", "http://localhost/diennuocgr.dev/");
 
+
 ?>

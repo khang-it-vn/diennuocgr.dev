@@ -6,13 +6,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png rel="apple-touch-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Not working css -->
+     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -21,7 +31,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <title>HomePageDesign</title>
+    <title>ĐIỆN NƯỚC TIẾN NGUYỄN</title>
 </head>
 <body>
 
@@ -44,35 +54,18 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">ĐIỆN NƯỚC TIẾN NGUYỄN<span>.</span></a></h1>
+      <h1 class="logo"><a href="<?php echo ROOT_URL?>">ĐIỆN NƯỚC TIẾN NGUYỄN<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Trang chủ</a></li>
-          <li><a class="nav-link scrollto" href="#about">Sản phẩm</a></li>
-          <li><a class="nav-link scrollto" href="#services">Dịch vụ</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Dự án</a></li>
-          <li><a class="nav-link scrollto" href="#team">Giới thiệu</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a id="home" class="nav-link scrollto " href="<?php echo ROOT_URL?>">Trang chủ</a></li>
+          <li><a id="product" class="nav-link scrollto" href="<?php echo ROOT_URL."Product/Index"?>">Sản phẩm</a></li>
+          <li><a id="service-provide" class="nav-link scrollto" href="<?php echo ROOT_URL."ServiceProvide/Index"?>">Dịch vụ</a></li>
+          <li><a id="post" class="nav-link scrollto " href="#portfolio">Dự án</a></li>
+          <li><a id="about" class="nav-link scrollto" href="#team">Giới thiệu</a></li>
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -85,67 +78,49 @@
     
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>BizLand<span>.</span></h3>
+            <h3>ĐIỆN NƯỚC TIẾN NGUYỄN<span>.</span></h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Đường kênh Thầy giáo <br>
+              Huyện Giồng Riềng<br>
+              Tỉnh Kiên Giang <br><br>
+              <strong>Phone:</strong> +84 0987 546 775<br>
+              <strong>Email:</strong> chutien@diennuoctiennguyen.com<br>
             </p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Truy cập nhanh tiện ích</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Trang chủ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sản phẩm</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Dịch vụ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Dự án gần đây</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Thông tin về chúng tôi</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Dịch vụ cung cấp</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sửa moto</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Lắp máy lọc nước</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hệ thống tưới tiêu</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hệ thống đèn điện trong nhà</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Thiết kế đường dây điện</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <h4>Thông tin liên hệ</h4>
+            <p>Khách hàng có thể liên hệ với chúng tôi qua các hình thức sau</p>
+            <div class="social-links mt-3"> 
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="tel:+84987546775" class="linkedin"><i class="">Zalo</i></a>
             </div>
           </div>
 
@@ -155,14 +130,10 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Điện nước Tiến Nguyễn</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://github.com/nguyenhoangkhangithutech">nguyenhoangkhangnsc19@gmail.com</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -171,6 +142,19 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Not working js -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -182,5 +166,29 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- script for active page -->
+  <script type="text/javascript">
+    var url = window.location.href;
+    var element = document.getElementById('home');
+    if(url.includes("Product"))
+    {
+       element = document.getElementById("product");
+    }
+    else if(url.includes("ServiceProvide"))
+    {
+       element = document.getElementById("service-provide");
+    }
+    else if(url.includes("post"))
+    {
+      element = document.getElementById("post"); 
+    }
+    else if(url.includes('about'))
+    {
+      element = document.getElementById('about');
+    }
+    element.classList.add('active');
+    
+  </script>
 </body>
 </html>

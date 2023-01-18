@@ -11,11 +11,13 @@
 	// import controller
 	require('controllers/Home.php');
 	require('controllers/User.php');
-
+	require('controllers/Product.php');
+	require('controllers/ServiceProvide.php');
 	//import model
 	require('models/HomeModel.php');
 	require('models/UserModel.php');
-
+	require('models/ProductModel.php');
+	require('models/ServiceProvideModel.php');
 
 	$requestFilter = new RequestFilter($_REQUEST);
 	$controller = $requestFilter -> createController();
