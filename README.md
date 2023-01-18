@@ -33,5 +33,12 @@ Các thực thể:
 
 - **Account** (UID, Username, Password)
 
+## 2. Use case
+##### 2.1 Xem danh sách sản phẩm
+##### 2.2 Xem chi tiết sản phẩm
+##### 2.3 Xem danh sách các bài viết gần đây
+##### 2.4 Xem chi tiết bài viết
+##### 2.5 Xem các dịch vụ cung cấp - chi tiết dịch vụ
+
 
 
