@@ -11,6 +11,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    
     <!-- Vendor CSS Files -->
     <link href="../assets/vendor/aos/aos.css" rel="stylesheet" type="text/css">
     <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css">
