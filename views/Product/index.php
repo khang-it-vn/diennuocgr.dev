@@ -13,7 +13,7 @@
                 </div>
                 <input type="text" class="form-control" aria-describedby="inputGroup-sizing-sm" id="nameProduct"  >
                  <div class="input-group-append">
-                   <button class="btn btn-outline-secondary" type="button">Tìm kiếm</button>
+                   <button class="btn btn-outline-secondary" type="button" id="btn-find-product">Tìm kiếm</button>
                 </div>
             </div>
             </form>
@@ -32,8 +32,8 @@
               <div class="d-flex justify-content-between align-items-center">
                 <label><i class="bi bi-eye"></i><?php echo $item['views'] ;?></label>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="#">Xem chi tiết</a></button>
-                   <button type="button" class="btn btn-sm btn-outline-secondary"><a href="#">Liên hệ đặt hàng</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="<?php echo ROOT_URL . 'Product/Detail?id_product=' . $item['id_product'];?>">Xem chi tiết</a></button>
+                   <button type="button" class="btn btn-sm btn-outline-secondary"><a href="tel:<?php echo NUMBERPHONE?>">Liên hệ đặt hàng</a></button>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@
   <?php endforeach;?>
   </div>
   <div class="d-flex justify-content-center w-100">
-  <a href="" id="viewMore"> Xem thêm >> </a>
+  <a href="" id="viewMore" style="display: true;"> Xem thêm >> </a>
    </div>
    </div>
   </div>
@@ -50,29 +50,65 @@
   <script type="text/javascript">
     var nameProduct = "";
 
+    // Get product by name
+    $('#btn-find-product').on('click',function (e){
+      if(nameProduct.length <= 0)
+      {
+        alert('Bạn cần điền tên sản phẩm cần tìm');
+        return;
+      }
+      let btnViewMore = document.getElementById('viewMore');
+      btnViewMore.style.display = "none";
+      $.ajax({
+          url:'<?php echo  ROOT_URL?>Product/GetProductWithName',
+          type:'POST',
+          data:{name:nameProduct},
+          success: function(data)
+          {
+            $('#products').html(data);
+          }
+        });
+    });
+    
+    $('#nameProduct').on('blur',function(e){
+      if(nameProduct.length <= 0)
+      {
+         getProductWithOutName();
+          let btnViewMore = document.getElementById('viewMore');
+          btnViewMore.style.display = "block";
+      }
+    })
+
     const elementNameProduct = document.getElementById('nameProduct');
 
     const onChangeNameProduct = function (evt)
     {
         nameProduct = evt.target.value;
-        console.log(nameProduct);
+
     }
     elementNameProduct.addEventListener('input',onChangeNameProduct);
 
 
   $('#viewMore').on('click', function(e){
     e.preventDefault();
-    $.ajax({
+      getProductWithOutName();
+ 
+    });
+
+  function getProductWithOutName()
+  {
+    if(nameProduct.length <= 0)
+    {
+      $.ajax({
       url: '<?php echo ROOT_URL ?>Product/GetProductsWithOutName',
       type: 'POST',
       data:{page: pageCurrent},
       success: function (data){
                 $("#products").append(data);
-                pageCurrent++;
-      } 
-
-    })
-  });
-
+                  pageCurrent++;
+        } 
+      })
+    }
+  }
   
 </script>

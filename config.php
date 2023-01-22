@@ -10,5 +10,17 @@
 	define("ROOT_PATH", "/");
 	define("ROOT_URL", "http://localhost/diennuocgr.dev/");
 
+	define("NUMBERPHONE", "+84987546775");
 
+
+
+	// variable state for program
+
+	//undefined value
+	define("UNDEFINEDVALUE", -1);
+
+	// undefined param
+
+	define("UNDEFINEDPARAM", -1);
+	
 ?>

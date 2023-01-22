@@ -66,8 +66,9 @@
           <li><a id="home" class="nav-link scrollto " href="<?php echo ROOT_URL?>">Trang chủ</a></li>
           <li><a id="product" class="nav-link scrollto" href="<?php echo ROOT_URL."Product/Index"?>">Sản phẩm</a></li>
           <li><a id="service-provide" class="nav-link scrollto" href="<?php echo ROOT_URL."ServiceProvide/Index"?>">Dịch vụ</a></li>
-          <li><a id="post" class="nav-link scrollto " href="#portfolio">Dự án</a></li>
+          <li><a id="post" class="nav-link scrollto " href="<?php echo ROOT_URL."Post/Index"?>">Dự án</a></li>
           <li><a id="about" class="nav-link scrollto" href="#team">Giới thiệu</a></li>
+          <li><a id="contact" class="nav-link scrollto" href="tel:+84987546775">Liên hệ</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -100,10 +101,10 @@
             <h4>Truy cập nhanh tiện ích</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Trang chủ</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Sản phẩm</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Dịch vụ</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Dự án gần đây</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Thông tin về chúng tôi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'Product/Index'?>">Sản phẩm</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'ServiceProvide/Index'?>">Dịch vụ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'Post/Index'?>">Dự án gần đây</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'About/Index'?>">Thông tin về chúng tôi</a></li>
             </ul>
           </div>
 
@@ -182,11 +183,11 @@
     {
        element = document.getElementById("service-provide");
     }
-    else if(url.includes("post"))
+    else if(url.includes("Post"))
     {
       element = document.getElementById("post"); 
     }
-    else if(url.includes('about'))
+    else if(url.includes('About'))
     {
       element = document.getElementById('about');
     }

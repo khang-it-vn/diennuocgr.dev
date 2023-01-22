@@ -13,12 +13,14 @@
 	require('controllers/User.php');
 	require('controllers/Product.php');
 	require('controllers/ServiceProvide.php');
+	require('controllers/Post.php');
 	//import model
 	require('models/HomeModel.php');
 	require('models/UserModel.php');
 	require('models/ProductModel.php');
 	require('models/ServiceProvideModel.php');
-
+	require('models/PostModel.php');
+	
 	$requestFilter = new RequestFilter($_REQUEST);
 	$controller = $requestFilter -> createController();
 	if($controller)

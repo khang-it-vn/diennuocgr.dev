@@ -41,9 +41,9 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <div class="icon"><i class="bi bi-emoji-laughing-fill"></i></div>
+              <h4 class="title"><a href="">Chất lượng dịch vụ</a></h4>
+              <p class="description">Luôn lắng nghe đóng góp ý kiến từ người dùng</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@
                 </li>
               </ul>
               <p>
-                Nội dung cần bổ sung thêm nếu cần thiết
+                Chào mừng đến với trang web điện nước của chúng tôi. Trang web này được tạo ra với mục đích cung cấp cho người dùng các thông tin cần thiết về điện và nước. Tại đây, bạn sẽ tìm thấy các thông tin về cách sử dụng, tính tiền và giải quyết các vấn đề liên quan đến điện và nước. Ngoài ra, chúng tôi cũng cung cấp các dịch vụ như lọc nước phèn, xây dựng hệ thống tưới tiêu, sửa chữa, lắp đặt điện nước trong nhà, thi công hệ thống điện. Chúng tôi cũng cung cấp các tài nguyên tham khảo và hướng dẫn chi tiết để giúp bạn hiểu rõ hơn về chủ đề. Nếu bạn cần bất kỳ dịch vụ liên quan đến lọc nước, xây dựng hệ thống tưới tiêu, sửa chữa, lắp đặt điện nước trong nhà hoặc thi công hệ thống điện, hãy liên hệ với chúng tôi để được tư vấn và hỗ trợ. Nếu có bất kỳ câu hỏi hoặc góp ý, vui lòng liên hệ với chúng tôi qua mục liên lạc. Chúng tôi mong muốn trang web này sẽ giúp bạn có thêm thông tin và tiện lợi trong việc sử dụng điện và nước, và cung cấp cho bạn các dịch vụ chuyên nghiệp và chất lượng cao để giúp giải quyết các vấn đề liên quan đến điện và nước của bạn. Hãy truy cập trang web của chúng tôi thường xuyên để cập nhật các thông tin mới nhất và các chương trình ưu đãi để tiết kiệm chi phí. Chúng tôi sẽ luôn đồng hành cùng bạn trong suốt quá trình sử dụng điện và nước của bạn và giúp bạn giải quyết bất kỳ vấn đề nào mà bạn gặp phải. Chúng tôi tự hào với chất lượng dịch vụ và đội ngũ nhân viên tư vấn chuyên nghiệp của chúng tôi. Hãy liên hệ với chúng tôi để biết thêm chi tiết về các dịch vụ của chúng tôi và để được hỗ trợ tốt nhất."
               </p>
             </div>
           </div>
