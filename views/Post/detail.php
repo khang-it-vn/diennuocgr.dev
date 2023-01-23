@@ -8,14 +8,20 @@
       <p class="card-text"><?php echo $viewModel['content']?></p>
       <div class="card">
         <div class="card-header">
-          <h4>Keywords:</h4>
+          <h4>Từ khóa:</h4>
         </div>
         <div class="card-body">
           <ul class="list-unstyled">
-            <li>Keyword 1</li>
-            <li>Keyword 2</li>
-            <li>Keyword 3</li>
-            <li>Keyword 4</li>
+
+            <!-- Convert string keywords and tags to array -->
+            <?php 
+              $keywords = explode( ';', $viewModel['keywords']);
+              $tags =  explode(';',$viewModel['tags']);
+            ?>
+           <?php foreach ($keywords as $item): ?>
+              <li># <?php echo $item; ?></li>
+        
+            <?php endforeach ?>
           </ul>
         </div>
       </div>
@@ -25,10 +31,11 @@
         </div>
         <div class="card-body">
           <ul class="list-unstyled">
-            <li>Tag 1</li>
-            <li>Tag 2</li>
-            <li>Tag 3</li>
-            <li>Tag 4</li>
+             <?php foreach ($tags as $item): ?>
+              <li># <?php echo $item; ?></li>
+           
+            <?php endforeach ?>
+            
           </ul>
         </div>
       </div>
