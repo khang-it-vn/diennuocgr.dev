@@ -28,7 +28,7 @@
           <div class="card-body">
             <h5 class="card-title">'. $item['title'].'</h5>
             <p class="card-text">'.substr($item['content'],0,200) .'...</p>
-            <a href="#" class="btn btn-primary">Đọc thêm</a>
+             <a href='. "'".ROOT_URL .'Post/Detail?id_post='.$item['id_post'] ."'".' class="btn btn-primary">Đọc thêm</a>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
 			          <div class="card-body">
 			            <h5 class="card-title">'. $item['title'].'</h5>
 			            <p class="card-text">'.substr($item['content'],0,200) .'...</p>
-			            <a href="#" class="btn btn-primary">Đọc thêm</a>
+			           <a href='. "'".ROOT_URL .'Post/Detail?id_post='.$item['id_post'] ."'".' class="btn btn-primary">Đọc thêm</a>
 			          </div>
 			        </div>
 			      </div>
@@ -73,6 +73,30 @@
 						 	$out .= "<div class='d-flex justify-content-center w-100 mt-4' style='color: red; font-style:italic' > Đã tìm hết dữ liệu</div>";
 						 }
 						 echo $out;
+		}
+
+
+		public function Detail()
+		{
+			// get uri 
+			$part  = explode('?', $_SERVER['REQUEST_URI'] );
+			// init array 
+			$params = array();
+			// convert key and value from uri
+			parse_str($part[1], $params);
+
+			$id_post = isset($params['id_post']) ? $params['id_post'] : UNDEFINEDPARAM;
+
+			if($id_post == UNDEFINEDPARAM)
+			{
+				echo '<p> Undefined Method</p>';
+				return;
+			}
+
+			$viewModel = new PostModel();
+
+			return $this ->ReturnView($viewModel -> GetDetailPost($id_post), true);
+			
 		}
 	}
 ?>

@@ -55,5 +55,20 @@
 			$this -> execute();
 			return $this ->statement->fetch(PDO::FETCH_ASSOC);
 		}
+
+
+		public function excuteProcedure()
+		{
+			$this->execute();
+			$result = $this -> statement ->get_result();
+			if($result -> num_rows > 0)
+			{
+				return $result;
+			}else
+			{
+				return null;
+			}
+
+		}
 }
 ?>

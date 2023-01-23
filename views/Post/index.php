@@ -28,7 +28,7 @@
           <div class="card-body">
             <h5 class="card-title"><?php echo $item['title']?></h5>
             <p class="card-text"><?php echo substr($item['content'],0,200) .'...' ?></p>
-            <a href="#" class="btn btn-primary">Đọc thêm</a>
+            <a href="<?php echo ROOT_URL .'Post/Detail?id_post='.$item['id_post'] ?>" class="btn btn-primary">Đọc thêm</a>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
 
 $('#viewMore').on('click', function(e){
     e.preventDefault();
-      if(search.length >= 0)
+      if(search.length > 0)
       {
           // when loadmore has content need search then state append is true
           stateAppend = true;
@@ -80,10 +80,7 @@ $('#viewMore').on('click', function(e){
       else
       {
             // get Post with out content search
-
           GetMorePostWithOutContentSearch();
-
- 
       }
     });
 

@@ -1,3 +1,5 @@
+<?php if(strstr($view, 'login.php') != null) : ?>
+
 <!DOCTYPE html>
 <html lang="vn">
 <head>
@@ -67,7 +69,7 @@
           <li><a id="product" class="nav-link scrollto" href="<?php echo ROOT_URL."Product/Index"?>">Sản phẩm</a></li>
           <li><a id="service-provide" class="nav-link scrollto" href="<?php echo ROOT_URL."ServiceProvide/Index"?>">Dịch vụ</a></li>
           <li><a id="post" class="nav-link scrollto " href="<?php echo ROOT_URL."Post/Index"?>">Dự án</a></li>
-          <li><a id="about" class="nav-link scrollto" href="#team">Giới thiệu</a></li>
+          <li><a id="about" class="nav-link scrollto" href="<?php echo ROOT_URL."About/Index"?>">Giới thiệu</a></li>
           <li><a id="contact" class="nav-link scrollto" href="tel:+84987546775">Liên hệ</a></li>
           
         </ul>
@@ -196,3 +198,6 @@
   </script>
 </body>
 </html>
+<?php else : ?>
+  <?php require($view);?>
+<?php endif;?>

@@ -31,5 +31,15 @@
 			return $this ->resultSet();
 
 		}
+
+		public function GetDetailPost($id_post)
+		{
+			$sql = "SELECT * FROM `post` WHERE id_post = :id_post;";
+
+			$this ->query($sql);
+			$this -> bind(':id_post', $id_post);
+			return $this->single();
+
+		}
 	}
 ?>

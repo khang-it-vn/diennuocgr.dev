@@ -81,6 +81,11 @@
 			// return data to view
 
 			$id_product = isset($params['id_product']) ? $params['id_product'] : UNDEFINEDPARAM ;
+			if($id_product == UNDEFINEDPARAM)
+			{
+				echo '<p>Method error</p>';
+				return;
+			}
 			return $this -> ReturnView($viewModel ->Detail($id_product), true);
 		}
 	}

@@ -1,5 +1,12 @@
 <?php 
 	class User extends Controller{
+
+		protected function Index()
+		{
+			$viewModel = new UserModel();
+			return $this->ReturnView($viewModel ->Index(), true);
+		}
+
 		protected function Login()
 		{
 			$viewModel = new UserModel();
