@@ -28,7 +28,9 @@
           <div class="card-body">
             <h5 class="card-title">'. $item['title'].'</h5>
             <p class="card-text">'.substr($item['content'],0,200) .'...</p>
+            <div>
              <a href='. "'".ROOT_URL .'Post/Detail?id_post='.$item['id_post'] ."'".' class="btn btn-primary">Đọc thêm</a>
+          	</div>
           </div>
         </div>
       </div>

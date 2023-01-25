@@ -22,23 +22,24 @@
     <div class="col-md-6 mt-4 custom-element ">
       <div class="row no-gutters">
         <div class="col-md-4 d-flex align-items-center justify-content-center">
-          <img src="../assets/img/products/<?php echo $item['banner']?>" class="card-img small-img" alt="Image">
+          <img src="../assets/img/post/<?php echo $item['banner']?>" class="card-img small-img" alt="Image">
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title"><?php echo $item['title']?></h5>
             <p class="card-text"><?php echo substr($item['content'],0,200) .'...' ?></p>
-            <a href="<?php echo ROOT_URL .'Post/Detail?id_post='.$item['id_post'] ?>" class="btn btn-primary">Đọc thêm</a>
+            <div><a href="<?php echo ROOT_URL .'Post/Detail?id_post='.$item['id_post'] ?>" class="btn btn-primary">Đọc thêm</a></div>
           </div>
         </div>
       </div>
     </div>
  <?php endforeach;?>
   </div>
-  <div class="d-flex justify-content-center w-100">
+  
+</div>
+<div class="d-flex justify-content-center w-100">
   <a href="" id="viewMore" style="display: true;"> Xem thêm >> </a>
    </div>
-</div>
 
 <style type="text/css">
 	

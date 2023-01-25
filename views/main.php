@@ -1,6 +1,11 @@
 <?php if(strstr($view, 'login.php') != null) : ?>
     <?php require($view);?>
 <?php elseif (strstr($view, 'Manage') != null ):?>
+<?php if(!(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'])) 
+{
+    return;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +26,9 @@
 
     <!-- Custom styles for this template-->
     <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
 </head>
 <body id="page-top">
@@ -186,14 +194,14 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['information']['fullname'];?></span>
                                 <img class="img-profile rounded-circle"
-                                    src="../assets/img/undraw_profile.svg">
+                                    src="../assets/img/personal/<?php echo $_SESSION['information']['avatar'];?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="<?php  echo ROOT_URL .'manage/information'?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>

@@ -4,10 +4,10 @@
 		public function GetPosts($page)
 		{
 
-			$start = $page * 16 + 1;
+			$start = $page * 16 ;
 			$end = $start + 16;
 
-			$sql = "SELECT * FROM `post` WHERE id_post >= :start and id_post <= :end;";
+			$sql = "SELECT * FROM `post` ORDER BY id_post DESC LIMIT :start,:end ;";
 			$this -> query($sql);
 			$this -> bind(':start', $start);
 			$this -> bind(':end', $end);
@@ -18,10 +18,10 @@
 
 		public function GetPostsByContent($page, $content)
 		{
-			$start = $page * 16 + 1;
+			$start = $page * 16 ;
 			$end = $start + 16;
 
-			$sql = "SELECT * FROM `post` WHERE title like :content OR content like :content LIMIT :start,:end";
+			$sql = "SELECT * FROM `post` WHERE title like :content OR content like :content ORDER BY id_post DESC LIMIT :start,:end";
 
 			$this -> query($sql);
 			$this ->bind(':content',"%$content%");

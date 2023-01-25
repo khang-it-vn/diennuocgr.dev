@@ -21,7 +21,9 @@
 						$_SESSION['information'] = array(
 							'id_account'=> $res[0]['id_account'],
 							'email' => $res[0]['email'],
-							'password' => $res[0]['PASSWORD']
+							'password' => $res[0]['PASSWORD'],
+							'fullname' => $res[0]['fullname'],
+							'avatar' => $res[0]['avatar']
 						);
 						header("Location: ".ROOT_URL.'manage/index');
 					}

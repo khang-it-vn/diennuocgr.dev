@@ -3,7 +3,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="../assets/img/personal/avartar.jpg" class="card-img-top img-fluid rounded-circle">
+                    <img src="../assets/img/personal/avatar.png" class="card-img-top img-fluid rounded-circle">
                 </div>
                 <div class="col-sm-8 pt-4">
                     <h1 class="card-title">Full Name</h1>
