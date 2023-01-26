@@ -182,7 +182,150 @@
 
 		public function Information()
 		{
-			
+			if(isset($_POST['submit']))
+			{
+				$avatar = $_FILES['avatar'];
+				if($_FILES['avatar']['error']> 0){
+					   echo "Error: ".$_FILES['avatar']['error']."<br>";
+					}
+
+					$filename = '';
+					if(isset($_FILES['avatar']) && $_FILES['avatar']['error'] == 0){
+					    $temp_file = $_FILES['avatar']['tmp_name'];
+
+					    $filename = $_FILES['avatar']['name'];
+					    $file_type = $_FILES['avatar']['type'];
+					    $file_size = $_FILES['avatar']['size'];
+					    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+					    $new_file = "assets/img/personal/".$filename;
+					    if(move_uploaded_file($temp_file, $new_file)){
+					        
+					    } else {
+					        echo "Error uploading file";
+					    }
+
+					    $sql = 'UPDATE information SET avatar = :avatar WHERE id_info = 1;';
+
+						$this ->query($sql);
+						$this->bind(":avatar",$filename);
+						 $this->execute();
+					}
+
+			}
 		}
+
+
+		public function UpdateYoutube()
+		{
+			if(isset($_POST['youtube']))
+			{
+				$sql = 'UPDATE information SET linkYoutube = :youtube WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":youtube", $_POST['youtube']);
+				return $this->execute();
+			}
+		}
+
+		public function UpdateZalo()
+		{
+			if(isset($_POST['nzalo']))
+			{
+				$sql = 'UPDATE information SET zalo = :zalo WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":zalo", $_POST['nzalo']);
+				return $this->execute();
+			}
+		}
+
+		public function UpdateEmail()
+		{
+			if(isset($_POST['email']))
+			{
+				$sql = 'UPDATE information SET email = :email WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":email", $_POST['email']);
+				return $this->execute();
+			}
+		}
+
+		public function UpdateNumberphone()
+		{
+			if(isset($_POST['numberphone']))
+			{
+				$sql = 'UPDATE information SET Numberphone = :numberphone WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":numberphone", $_POST['numberphone']);
+				return $this->execute();
+			}
+		}
+
+		public function UpdateMajor()
+		{
+			if(isset($_POST['major']))
+			{
+				$sql = 'UPDATE information SET major = :major WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":major", $_POST['major']);
+				return $this->execute();
+			}
+		}
+
+		public function UpdateAddress()
+		{
+			if(isset($_POST['address']))
+			{
+				$sql = 'UPDATE information SET address = :address WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":address", $_POST['address']);
+				return $this->execute();
+			}
+		}
+		
+
+		public function UpdateFullName()
+		{
+			if(isset($_POST['fullname']))
+			{
+				$sql = 'UPDATE information SET fullname = :fullname WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":fullname", $_POST['fullname']);
+				return $this->execute();
+			}
+		}
+
+		public function UpdateIntroduce()
+		{
+			if(isset($_POST['introduce']))
+			{
+				$sql = 'UPDATE information SET linkVideoIntroduce = :introduce WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":introduce", $_POST['introduce']);
+				return $this->execute();
+			}
+		}
+
+		public function UpdateFacebook()
+		{
+			if(isset($_POST['facebook']))
+			{
+				$sql = 'UPDATE information SET linkFb = :facebook WHERE id_info = 1;';
+
+				$this ->query($sql);
+				$this->bind(":facebook", $_POST['facebook']);
+				return $this->execute();
+			}
+		}
+
+		
+			
+		
 	}
 ?>

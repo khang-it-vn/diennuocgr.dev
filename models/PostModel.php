@@ -34,11 +34,23 @@
 
 		public function GetDetailPost($id_post)
 		{
+			
+
 			$sql = "SELECT * FROM `post` WHERE id_post = :id_post;";
 
 			$this ->query($sql);
 			$this -> bind(':id_post', $id_post);
-			return $this->single();
+			$result = $this->single();
+
+			$sqlUpdateView = "UPDATE post SET views = :view WHERE id_post =:id_post";
+			
+			$this->query($sqlUpdateView);
+			$this->bind(':view',++$result['views']);
+			$this->bind(':id_post', $result['id_post']);
+			$this->execute();
+
+
+			return $result;
 
 		}
 	}

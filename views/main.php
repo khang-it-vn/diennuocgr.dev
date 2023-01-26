@@ -355,14 +355,13 @@
     <section id="topbar" class="d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
           <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:chutien@tiennguyen.com">chutien@tiennguyen.com</a></i>
-            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+84 0987 546 775</span></i>
+            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:chutien@tiennguyen.com"><?php echo $_SESSION['about']['email']?></a></i>
+            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+84 <?php echo $_SESSION['about']['Numberphone']?></span></i>
           </div>
           <div class="social-links d-none d-md-flex align-items-center">
-            <a href="https://www.facebook.com/it.nhk.hutech/" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            <a href="<?php echo $_SESSION['about']['linkFb']?>" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="tel:+84<?php echo $_SESSION['about']['zalo']?>" class="instagram"><i>Zalo</i></a>
+           
           </div>
         </div>
       </section>
@@ -381,7 +380,7 @@
           <li><a id="service-provide" class="nav-link scrollto" href="<?php echo ROOT_URL."ServiceProvide/Index"?>">Dịch vụ</a></li>
           <li><a id="post" class="nav-link scrollto " href="<?php echo ROOT_URL."Post/Index"?>">Dự án</a></li>
           <li><a id="about" class="nav-link scrollto" href="<?php echo ROOT_URL."About/Index"?>">Giới thiệu</a></li>
-          <li><a id="contact" class="nav-link scrollto" href="tel:+84987546775">Liên hệ</a></li>
+          <li><a id="contact" class="nav-link scrollto" href="tel:+84<?php echo $_SESSION['about']['Numberphone']?>">Liên hệ</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -401,12 +400,10 @@
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>ĐIỆN NƯỚC TIẾN NGUYỄN<span>.</span></h3>
-            <p>
-              Đường kênh Thầy giáo <br>
-              Huyện Giồng Riềng<br>
-              Tỉnh Kiên Giang <br><br>
-              <strong>Phone:</strong> +84 0987 546 775<br>
-              <strong>Email:</strong> chutien@diennuoctiennguyen.com<br>
+            <p> <?php echo $_SESSION['about']['address']?>
+              <br>
+              <strong>Phone:</strong> +84 <?php echo $_SESSION['about']['Numberphone']?><br>
+              <strong>Email:</strong> <?php echo $_SESSION['about']['email']?><br>
             </p>
           </div>
 
@@ -436,8 +433,8 @@
             <h4>Thông tin liên hệ</h4>
             <p>Khách hàng có thể liên hệ với chúng tôi qua các hình thức sau</p>
             <div class="social-links mt-3"> 
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="tel:+84987546775" class="linkedin"><i class="">Zalo</i></a>
+              <a href="<?php echo $_SESSION['about']['linkFb']?>" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="tel:+84<?php echo $_SESSION['about']['Numberphone']?>" class="linkedin"><i class="">Zalo</i></a>
             </div>
           </div>
 

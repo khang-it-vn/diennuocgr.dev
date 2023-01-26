@@ -2,6 +2,22 @@
 	class HomeModel extends DbContext{
 		public function Index()
 		{
+			$sql = 'SELECT * FROM `information` WHERE id_info = 1;';
+			$this->query($sql);
+			$information = $this->single();
+			$_SESSION['about'] = array(
+				'linkVideoIntroduce' => $information['linkVideoIntroduce'],
+				'linkFb' => $information['linkFb'],
+				'linkYoutube' => $information['linkYoutube'],
+				'zalo' => $information['zalo'],
+				'email' => $information['email'],
+				'address' => $information['address'],
+				'fullname' => $information['fullname'],
+				'avatar' => $information['avatar'],
+				'major' => $information['major'],
+				'Numberphone' => $information['Numberphone']
+			);
+
 			$this -> query("Select * from account");
 			$rows = $this -> resultSet();
 			// print_r($rows);

@@ -4,8 +4,8 @@
       <h1>Chào mừng bạn đến với điện nước <span>TIẾN NGUYỄN</span></h1>
       <h2>Nơi nào kiên giang có điện nước nơi đó có điện nước TIẾN NGUYỄN</h2>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Liên hệ ngay để được tư vấn miễn phí</a>
-        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Xem video giới thiệu</span></a>
+        <a href="tel:+84<?php echo $_SESSION['about']['Numberphone']?>" class="btn-get-started scrollto">Liên hệ ngay để được tư vấn miễn phí</a>
+        <a href="<?php echo $_SESSION['about']['linkVideoIntroduce']?>" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Xem video giới thiệu</span></a>
       </div>
     </div>
   </section><!-- End Hero -->

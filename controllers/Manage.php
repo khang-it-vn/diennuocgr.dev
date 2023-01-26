@@ -188,8 +188,94 @@
 		{
 			 $viewModel = new ManageModel();
 
-			 return $this->ReturnView($viewModel ->Index(),true);
+			 return $this->ReturnView($viewModel ->Information(),true);
 		}
+
+
+
+		public function UpdateYoutube()
+		{
+				$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateYoutube();
+
+				echo $result;
+		}
+
+		public function UpdateZalo()
+		{
+			$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateZalo();
+
+				echo $result;
+		}
+
+		public function UpdateEmail()
+		{
+			$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateEmail();
+
+				echo $result;
+		}
+
+		public function UpdateNumberphone()
+		{
+			$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateNumberphone();
+
+				echo $result;
+		}
+
+
+		public function UpdateMajor()
+		{
+				$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateMajor();
+
+				echo $result;
+		}
+
+		public function UpdateAddress()
+		{
+				$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateAddress();
+
+				echo $result;
+		}
+
+		public function UpdateFullName()
+		{
+				$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateFullName();
+
+				echo $result;
+		}
+
+		public function UpdateIntroduce()
+		{
+				$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateIntroduce();
+
+				echo $result;
+		}
+
+		public function UpdateFacebook()
+		{
+				$viewModel = new ManageModel();
+
+				$result = $viewModel ->UpdateFacebook();
+
+				echo $result;
+		}
+
+		
 
 	}
 ?>

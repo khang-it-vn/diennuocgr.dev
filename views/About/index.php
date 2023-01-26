@@ -3,14 +3,14 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="../assets/img/personal/avatar.png" class="card-img-top img-fluid rounded-circle">
+                    <img src="../assets/img/personal/<?php echo $_SESSION['about']['avatar']?>" class="card-img-top img-fluid rounded-circle">
                 </div>
                 <div class="col-sm-8 pt-4">
-                    <h1 class="card-title">Full Name</h1>
-                    <p>Địa chỉ: Đường kênh Thầy giáo, Giồng Riềng, Kiên Giang</p>
-                    <p>Trình độ: Giảng Viên</p>
-                    <p>Số điện thoại: 0543957</p>
-                    <p>Dịch vụ cung cấp: Sửa chữa điện nước</p>
+                    <h1 class="card-title">Họ và tên</h1>
+                    <p><b>Địa chỉ: </b> <?php echo $_SESSION['about']['address']?></p>
+                    <p><b>Trình độ:</b> <?php echo $_SESSION['about']['major']?></p>
+                    <p><b>Số điện thoại:</b> <?php echo $_SESSION['about']['Numberphone']?></p>
+                    <!-- <p>Dịch vụ cung cấp: Sửa chữa điện nước</p> -->
                 </div>
             </div>
             <hr class="my-4">
@@ -49,7 +49,7 @@
 	let description = document.querySelector('.card-text');
 	let content = document.querySelector('.card-text:last-of-type');
 
-	fullName.innerHTML = 'Nguyễn Văn Tiến';
+	fullName.innerHTML = '<?php echo $_SESSION['about']['fullname']?>';
 	description.innerHTML = 'Mô tả';
 	//content.innerHTML = 'Tiêu chí';
 
