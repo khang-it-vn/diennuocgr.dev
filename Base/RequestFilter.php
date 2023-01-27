@@ -6,25 +6,27 @@
 
 		public function __construct($request){
 			$this->request = $request;
+
+			if ($_SERVER['HTTP_HOST'] === DOMAIN && $_SERVER['REQUEST_URI'] === '/') 
+            {
+                header('Location: http://'.DOMAIN.'/home/index');
+                exit;
+            }
+
 			if($this -> request['controller'] == "")
 			{
-				$this -> controller = 'home';
+				$this->request['controller'] = 'home';
 			}
-			else
-			{
-				$this -> controller = $this -> request ['controller'];
-			}
+
+			$this -> controller = strtolower($this -> request ['controller']);
 
 			if($this -> request['action'] == "")
 			{
-				$this -> action = 'index';
-			}
-			else
-			{
-				$this -> action = $this -> request['action'];
+				$this->request['action'] = 'index';
 			}
 
-			//echo $this->controller . ',' .$this->action;
+			$this -> action = strtolower($this -> request['action']);
+
 		}
 
 		public function createController()

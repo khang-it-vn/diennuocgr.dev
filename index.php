@@ -12,7 +12,7 @@
 	require('controllers/Home.php');
 	require('controllers/User.php');
 	require('controllers/Product.php');
-	require('controllers/ServiceProvide.php');
+	require('controllers/Servicep.php');
 	require('controllers/Post.php');
 	require('controllers/About.php');
 	require('controllers/Manage.php');

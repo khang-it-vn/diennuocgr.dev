@@ -1,6 +1,6 @@
 <?php 
 
-	class ServiceProvide extends Controller{
+	class Servicep extends Controller{
 
 		public function Index()
 		{	

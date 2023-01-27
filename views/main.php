@@ -317,8 +317,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Favicons -->
-    <link href="../assets/img/favicon.png" rel="icon">
-    <link href="../assets/img/apple-touch-icon.png rel="apple-touch-icon">
+    <link rel="icon" type="images/x-icon" href="../assets/img/iconseo.png" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     
@@ -377,7 +376,7 @@
         <ul>
           <li><a id="home" class="nav-link scrollto " href="<?php echo ROOT_URL?>">Trang chủ</a></li>
           <li><a id="product" class="nav-link scrollto" href="<?php echo ROOT_URL."Product/Index"?>">Sản phẩm</a></li>
-          <li><a id="service-provide" class="nav-link scrollto" href="<?php echo ROOT_URL."ServiceProvide/Index"?>">Dịch vụ</a></li>
+          <li><a id="service-provide" class="nav-link scrollto" href="<?php echo ROOT_URL."Servicep/Index"?>">Dịch vụ</a></li>
           <li><a id="post" class="nav-link scrollto " href="<?php echo ROOT_URL."Post/Index"?>">Dự án</a></li>
           <li><a id="about" class="nav-link scrollto" href="<?php echo ROOT_URL."About/Index"?>">Giới thiệu</a></li>
           <li><a id="contact" class="nav-link scrollto" href="tel:+84<?php echo $_SESSION['about']['Numberphone']?>">Liên hệ</a></li>
@@ -412,7 +411,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Trang chủ</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'Product/Index'?>">Sản phẩm</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'ServiceProvide/Index'?>">Dịch vụ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'Servicep/Index'?>">Dịch vụ</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'Post/Index'?>">Dự án gần đây</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<?php echo ROOT_URL.'About/Index'?>">Thông tin về chúng tôi</a></li>
             </ul>
@@ -489,7 +488,7 @@
     {
        element = document.getElementById("product");
     }
-    else if(url.includes("ServiceProvide"))
+    else if(url.includes("Servicep"))
     {
        element = document.getElementById("service-provide");
     }

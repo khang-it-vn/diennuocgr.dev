@@ -13,6 +13,8 @@
 	define("NUMBERPHONE", "+84987546775");
 
 
+	//domain
+	define('DOMAIN', 'localhost/diennuocgr.dev');
 
 	// variable state for program
 
